@@ -1,229 +1,237 @@
+/* Remover margens e preenchimentos padrão do corpo e do HTML */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Container principal */
 .main-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu do Dashboard */
+.sidebar {
+  width: 273px;
+  height: 912px;
+  background-color: #C08900;
+  border-radius: 0 50px 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  opacity: 0.9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+.sidebar-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px 20px;
+  padding-left: 25px;
+}
+
+.menu-item.dashboard {
+  background-image: url('../../assets/Dashboard/dashboard.png');
+}
+
+.menu-item.empresas {
+  background-image: url('../../assets/Dashboard/empresas.png');
+}
+
+.menu-item.plano {
+  background-image: url('../../assets/Dashboard/PlanoContas.png');
+}
+
+.menu-item.pagamentos {
+  background-image: url('../../assets/Dashboard/Pagamentos.png');
+}
+
+.menu-item.usuarios {
+  background-image: url('../../assets/Dashboard/Usuário.png');
+}
+
+.menu-item.planejamento {
+  background-image: url('../../assets/Dashboard/PlanejamentoFinanceiro.png');
+}
+
+.menu-item:hover {
+  background-color: #e0e0e0;
+  color: #C08900;
+}
+
+/* Estilo para o novo elemento geral, "quadrado" da Dashboard */
+.square {
+  width: 1062px;
+  height: 765px;
+  position: absolute;
+  top: 130px;
+  left: 273px;
+  background: #F1F1F1;
+  border-radius: 20px;
+  margin-left: 1cm;
+}
+
+/* Estilo para os novos elementos das caixas */
+.box {
+  width: 210px;
+  height: 110px;
+  background-color: #FFFFFF;
+  margin-right: 1cm;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 35px;
+  position: relative;
+}
+
+.box:first-child {
+  margin-left: 1cm;
+  border-top: 20px solid #E1B20C;
+}
+
+.box-title {
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.box:nth-child(2) {
+  border-top: 20px solid #C20202;
+}
+
+/* Estilo para a borda superior da terceira caixa */
+.box:nth-child(3) {
+  border-top: 20px solid #352D67;
+}
+
+/* Estilo para a borda superior da quarta caixa */
+.box:nth-child(4) {
+  border-top: 20px solid #0CB531;
+}
+
+.search-bar {
+  position: absolute;
+  width: 758px;
+  top: 41px;
+  left: 273px;
+  margin-left: 1cm;
+}
+
+.search-bar input {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.user-name-display {
+  position: absolute;
+  width: 180px;
+  height: 17px;
+  top: 40px;
+  left: 1560px;
+  background-color: #ffffff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
   .dashboard-container {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-  }
-  
-  /* Menu do Dashboard */
-  .sidebar {
-    width: 273px;
-    height: 912px;
-    background-color: #C08900;
-    border-radius: 0 50px 50px 0;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    opacity: 0.9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .sidebar-header {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: white;
-  }
-  
-  .menu {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-  }
-  
-  .menu-item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 15px 20px;
-    box-sizing: border-box;
-    text-align: left;
-    cursor: pointer;
-    transition: background 0.3s;
-    color: white;
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 20px 20px; /* Ajuste o tamanho conforme necessário */
-    padding-left: 25px; /* Ajuste o espaçamento para acomodar o ícone */
-  }
-  
-  .menu-item.dashboard {
-    background-image: url('../../assets/Dashboard/painel-de-controle.png');
-  }
-  
-  .menu-item.empresas {
-    background-image: url('../../assets/Dashboard/companhia.png');
-  }
-  
-  .menu-item.plano {
-    background-image: url('../../assets/Dashboard/plano-de-saude.png');
-  }
-  
-  .menu-item.pagamentos {
-    background-image: url('../../assets/Dashboard/forma-de-pagamento.png');
-  }
-  
-  .menu-item.usuarios {
-    background-image: url('../../assets/Dashboard/silhueta-de-multiplos-usuarios.png');
-  }
-  
-  .menu-item.planejamento {
-    background-image: url('../../assets/Dashboard/financeiro.png');
   }
 
-  .menu-item.logout {
-    background-image: url('../../assets/Dashboard/sair-do-usuario.png');
-  }
-  
-  .menu-item:hover {
-    background-color: #e0e0e0;
-    color: #C08900;
-  }
-  
-  /* Estilo para o novo elemento geral, "quadrado" da Dashboard */
-  .square {
-    width: 1062px;
-    height: 765px;
-    position: absolute;
-    top: 130px;
-    left: 273px;
-    background: #F1F1F1;
-    border-radius: 20px;
-    margin-left: 1cm;
-  }
-  
-  /* Estilo para os novos elementos das caixas */
-  .box {
-    width: 210px; /* Calcula a largura das caixas com 1cm de separação entre elas */
-    height: 110px; /* Ajuste a altura conforme necessário */
-    background-color: #FFFFFF;
-    margin-right: 1cm;
-    border-radius: 10px;
-    display: inline-block;
-    margin-top: 35px;
-    position: relative;
-  
-  }
-  
-  /* Cor de Marcação das Caixinhas */
-  .box:first-child {
-    margin-left: 1cm;
-    border-top: 20px solid #E1B20C;
-  }
-  
-  
-  .box-title {
-    position: absolute;
-    top: 25px;
-    left: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .box:nth-child(2) {
-    border-top: 20px solid #C20202;
-  }
-  
-  /* Estilo para a borda superior da terceira caixa */
-  .box:nth-child(3) {
-    border-top: 20px solid #352D67;
-  }
-  
-  /* Estilo para a borda superior da quarta caixa */
-  .box:nth-child(4) {
-    border-top: 20px solid #0CB531; /* Adiciona uma borda superior de 20px sólida em cima da quarta caixa */
-  }
-  
-  .search-bar {
-    position: absolute;
-    width: 758px;
-    top: 41px;
-    left: 273px;
-    margin-left: 1cm;
-  }
-  
-  .search-bar input {
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+  .sidebar {
     width: 100%;
-    box-sizing: border-box;
+    height: auto;
+    flex-direction: row;
+    padding: 10px;
+    overflow-x: auto;
   }
+
+  .menu {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .menu-item {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .square {
+    width: auto;
+    height: auto;
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .box {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin: 20px 0;
+  }
+
   .user-name-display {
-    position: absolute;
-    width: 180px;
-    height: 17px;
-    top: 40px;
-    left: 1560px;
-    background-color: #ffffff;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 30px 30px 30px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 20px 0;
   }
-  
-  @media (max-width: 768px) {
-    .dashboard-container {
-      flex-direction: column;
-    }
-  
-    .sidebar {
-      width: 100%;
-      height: auto;
-      flex-direction: row;
-      padding: 10px;
-      overflow-x: auto;
-    }
-  
-    .menu {
-      flex-direction: row;
-      width: auto;
-    }
-  
-    .menu-item {
-      padding: 10px;
-      text-align: center;
-    }
-  
-    .square {
-      width: auto;
-      height: auto;
-      margin: 20px;
-      padding: 10px;
-    }
-  
-    .box {
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-      padding: 10px;
-    }
-  
-    .search-bar {
-      width: 100%;
-      margin: 20px 0;
-    }
-  
-    .user-name-display {
-      width: auto;
-      height: auto;
-      margin: 20px 0;
-    }
-  }
+}

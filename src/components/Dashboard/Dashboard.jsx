@@ -13,18 +13,29 @@ const Dashboard = ({ userName }) => {
                     <li className="menu-item pagamentos">Pagamentos</li>
                     <li className="menu-item usuarios">Usuários</li>
                     <li className="menu-item planejamento">Planejamento Financeiro</li>
-                    <li className="menu-item logout">Logout</li>
                 </ul>
             </div>
             <div className="search-bar">
                 <input type="text" placeholder="Pesquisar..." />
                 {/* Aqui você pode adicionar um ícone de busca se desejar */}
-                <span>Fernanda F.</span>
             </div>
             <div className="user-name-display">
                 {userName}
             </div>
-           
+            <div className="square">
+                <div className="box">
+                    <div className="box-title">Receitas</div>
+                </div>
+                <div className="box">
+                    <div className="box-title">Despesas</div>
+                </div>
+                <div className="box">
+                    <div className="box-title">Boletos</div>
+                </div>
+                <div className="box">
+                    <div className="box-title">Finalizadas(Pagas)</div>
+                </div>
+            </div>
         </div>
     );
 };
