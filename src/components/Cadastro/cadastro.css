@@ -1,0 +1,65 @@
+.cadastro-container {
+  background-color: #C08900;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 550px;
+  margin: 0 auto;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #F5F3ED;
+  
+  
+}
+.cadastro-container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.overlay.show {
+  display: block;
+}
+.cadastro-container h2 {
+  color: #F5F3ED;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #F5F3ED;
+  color: #C08900;
+  border: none;
+  padding: 08px 16px;
+  border-radius: 5px;
+  cursor: pointer;  
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #E0D9C9;
+}
