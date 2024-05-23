@@ -1,0 +1,112 @@
+/* Remover margens e preenchimentos padrão do corpo e do HTML */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Container principal */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu do Dashboard */
+.sidebar {
+  width: 273px;
+  height: 912px;
+  background-color: #C08900;
+  border-radius: 0 50px 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  opacity: 0.9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+.sidebar-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px 20px;
+  padding-left: 25px;
+}
+
+.menu-item.dashboard {
+  background-image: url('../../assets/Dashboard/dashboard.png');
+}
+
+.menu-item.empresas {
+  background-image: url('../../assets/Dashboard/empresas.png');
+}
+
+.menu-item.plano {
+  background-image: url('../../assets/Dashboard/PlanoContas.png');
+}
+
+.menu-item.pagamentos {
+  background-image: url('../../assets/Dashboard/Pagamentos.png');
+}
+
+.menu-item.usuarios {
+  background-image: url('../../assets/Dashboard/Usuário.png');
+}
+
+.menu-item.planejamento {
+  background-image: url('../../assets/Dashboard/PlanejamentoFinanceiro.png');
+}
+
+.menu-item:hover {
+  background-color: #e0e0e0;
+  color: #C08900;
+}
+
+/* Estilo para o novo elemento geral, "quadrado" da Dashboard */
+.square {
+  width: 1062px;
+  height: 765px;
+  position: absolute;
+  top: 130px;
+  left: 273px;
+  background: #F1F1F1;
+  border-radius: 20px;
+  margin-left: 1cm;
+}

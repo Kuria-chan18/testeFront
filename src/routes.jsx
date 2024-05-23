@@ -6,6 +6,7 @@ import Login2 from './components/Login2/logintwo';
 import Cadastro from './components/Cadastro/cadastro';
 import PlanoContas from './components/PlanoDeContas/planoContas';
 import Dashboard from './components/Dashboard/Dashboard';
+import Empresas from './components/Empresas/empresas';
 
 function Main(){
     return(
@@ -17,6 +18,7 @@ function Main(){
             <Route path='/cadastro' element={<Cadastro />}/>
             <Route path='/plano' element={<PlanoContas />}/>
             <Route path='/dashboard' element={<Dashboard />}/>
+            <Route path='/empresas' element={<Empresas />}/>
             </Routes>
         </Router>
     )
